@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="4" tests="60" time="59.400" timestamp="2025-11-25T16:50:05.652109+05:30" hostname="DESKTOP-5S9IN5U"><testcase classname="tests.test_ordering4.TestClass" name="test_methodA" time="0.002" /><testcase classname="tests.test_ordering3.TestClass" name="test_methodA" time="0.001" /><testcase classname="tests.test_ordering4.TestClass" name="test_methodB" time="0.001" /><testcase classname="tests.test_ordering3.TestClass" name="test_methodB" time="0.001" /><testcase classname="tests.test_ordering4.TestClass" name="test_methodC" time="0.001" /><testcase classname="tests.test_ordering3.TestClass" name="test_methodC" time="0.001" /><testcase classname="tests.test_ordering4.TestClass" name="test_methodD" time="0.001" /><testcase classname="tests.test_ordering3.TestClass" name="test_methodD" time="0.001" /><testcase classname="tests.test_ordering4.TestClass" name="test_methodE" time="0.002" /><testcase classname="tests.test_ordering3.TestClass" name="test_methodE" time="0.001" /><testcase classname="sample.test_register" name="test_register_with_mandatory_fields" time="0.002" /><testcase classname="sample.test_register" name="test_register_with_all_fields" time="0.001" /><testcase classname="sample.test_sample" name="test_login_with_Valid_credentials" time="0.001" /><testcase classname="sample.test_sample" name="test_login_with_Invalid_credentials" time="0.001" /><testcase classname="sample.test_search" name="test_search_for_a_valid_products" time="0.002" /><testcase classname="sample.test_search" name="test_search_for_a_Invalid_products" time="0.003" /><testcase classname="test.test_sample1" name="test_login_with_Valid_credentials" time="0.002" /><testcase classname="test.test_sample1" name="test_login_with_Invalid_credentials" time="0.002" /><testcase classname="tests.test_Demo1" name="test_demo1_sample_one" time="0.002"><failure message="assert 10 == 13">@pytest.mark.smoke
+    def test_demo1_sample_one():
+        print("Inside the sample one")
+&gt;       assert 10==13
+E       assert 10 == 13
+
+tests\test_Demo1.py:6: AssertionError</failure></testcase><testcase classname="tests.test_Demo1" name="test_demo1_sample_two" time="0.001" /><testcase classname="tests.test_Demo1" name="test_demo1_sample_three" time="0.000" /><testcase classname="tests.test_Demo2" name="test_demo2_sample_one" time="0.001" /><testcase classname="tests.test_Demo2" name="test_demo2_sample_two" time="0.000"><skipped type="pytest.skip" message="unconditional skip">C:\Users\Satish\pycharmprojects\python2025\PYTHON2\tests\test_Demo2.py:7: unconditional skip</skipped></testcase><testcase classname="tests.test_Demo2" name="test_demo2_sample_three" time="0.000" /><testcase classname="tests.test_Demo3" name="test_demo3_sample_one" time="0.001"><failure message="AssertionError: 'Basava' is not Equal to 'QACircle'&#10;assert False&#10; +  where False = &lt;method-wrapper '__eq__' of str object at 0x0000019DB43989F0&gt;('QACircle')&#10; +    where &lt;method-wrapper '__eq__' of str object at 0x0000019DB43989F0&gt; = 'Basava'.__eq__">@pytest.mark.regression
+    @pytest.mark.smoke
+    @pytest.mark.sanity
+    def test_demo3_sample_one():
+        print("Inside the sample one")
+        a = "Basava"
+        b = "QACircle"
+&gt;       assert a.__eq__(b), "'Basava' is not Equal to 'QACircle'"
+E       AssertionError: 'Basava' is not Equal to 'QACircle'
+E       assert False
+E        +  where False = &lt;method-wrapper '__eq__' of str object at 0x0000019DB43989F0&gt;('QACircle')
+E        +    where &lt;method-wrapper '__eq__' of str object at 0x0000019DB43989F0&gt; = 'Basava'.__eq__
+
+tests\test_Demo3.py:10: AssertionError</failure></testcase><testcase classname="tests.test_Demo3" name="test_demo3_sample_two" time="0.001"><failure message="assert 2 &gt; 5">@pytest.mark.regression
+    def test_demo3_sample_two():
+        print("Inside the sample two")
+        a=2
+        b=5
+&gt;       assert a&gt;b
+E       assert 2 &gt; 5
+
+tests\test_Demo3.py:17: AssertionError</failure></testcase><testcase classname="tests.test_Demo3" name="test_demo3_sample_three" time="0.001"><failure message="AssertionError: assert False&#10; +  where False = &lt;method-wrapper '__eq__' of int object at 0x00007FF8F0532608&gt;(30)&#10; +    where &lt;method-wrapper '__eq__' of int object at 0x00007FF8F0532608&gt; = 20.__eq__">@pytest.mark.regression
+    def test_demo3_sample_three():
+        print("Inside the sample three")
+        a=20
+        b=30
+&gt;       assert a.__eq__(b)
+E       AssertionError: assert False
+E        +  where False = &lt;method-wrapper '__eq__' of int object at 0x00007FF8F0532608&gt;(30)
+E        +    where &lt;method-wrapper '__eq__' of int object at 0x00007FF8F0532608&gt; = 20.__eq__
+
+tests\test_Demo3.py:25: AssertionError</failure></testcase><testcase classname="tests.test_dependency.TestClass" name="test_openApp" time="0.001" /><testcase classname="tests.test_dependency.TestClass" name="test_login" time="0.000" /><testcase classname="tests.test_dependency.TestClass" name="test_search" time="0.000" /><testcase classname="tests.test_dependency.TestClass" name="test_advancedsearch" time="0.000" /><testcase classname="tests.test_dependency.TestClass" name="test_logout" time="0.001" /><testcase classname="tests.test_dependency.TestClass.TestClass" name="test_openApp" time="0.001"><failure message="assert False">self = &lt;PYTHON2.tests.test_dependency.TestClass.TestClass object at 0x0000019DB3B46850&gt;
+
+    @pytest.mark.dependency()
+    def test_openApp(self):
+&gt;       assert False
+E       assert False
+
+tests\test_dependency.py:36: AssertionError</failure></testcase><testcase classname="tests.test_dependency.TestClass.TestClass" name="test_login" time="0.001" /><testcase classname="tests.test_dependency.TestClass.TestClass" name="test_search" time="0.001" /><testcase classname="tests.test_dependency.TestClass.TestClass" name="test_advancedsearch" time="0.001" /><testcase classname="tests.test_dependency.TestClass.TestClass" name="test_logout" time="0.001" /><testcase classname="tests.test_ordering1.TestClass" name="test_methodA" time="0.001" /><testcase classname="tests.test_ordering1.TestClass" name="test_methodB" time="0.000" /><testcase classname="tests.test_ordering1.TestClass" name="test_methodC" time="0.000" /><testcase classname="tests.test_ordering1.TestClass" name="test_methodD" time="0.000" /><testcase classname="tests.test_ordering1.TestClass" name="test_methodE" time="0.000" /><testcase classname="tests.test_ordering2.TestClass" name="test_methodC" time="0.001" /><testcase classname="tests.test_ordering2.TestClass" name="test_methodD" time="0.001" /><testcase classname="tests.test_ordering2.TestClass" name="test_methodE" time="0.001" /><testcase classname="tests.test_ordering2.TestClass" name="test_methodA" time="0.001" /><testcase classname="tests.test_ordering2.TestClass" name="test_methodB" time="0.001" /><testcase classname="tests.test_parameterization" name="test_sample[QACirlce-Q@123]" time="0.001" /><testcase classname="tests.test_parameterization" name="test_sample[Training-QA@123]" time="0.001" /><testcase classname="tests.test_parameterization" name="test_sample[Academy-QAC@123]" time="0.001" /><testcase classname="tests.test_parameterization.TestClass" name="test_swaglabs[standard_user-secret_sauce]" time="13.655" /><testcase classname="tests.test_parameterization.TestClass" name="test_swaglabs[locked_out_user-secret_sauce]" time="14.058"><failure message="AttributeError: 'TestClass' object has no attribute 'status'">self = &lt;PYTHON2.tests.test_parameterization.TestClass object at 0x0000019DB47565D0&gt;, username = 'locked_out_user', password = 'secret_sauce'
+
+    @pytest.mark.parametrize('username,password',[("standard_user","secret_sauce"),("locked_out_user","secret_sauce"),("problem_user","secret_sauce"),("error_user","secret_sauce")])
+    def test_swaglabs(self,username,password):
+        self.driver = webdriver.Chrome()
+        self.driver.get("https://www.saucedemo.com/")
+        self.driver.find_element(By.ID, "user-name").send_keys(username)
+        self.driver.find_element(By.ID, "password").send_keys(password)
+        time.sleep(5)
+        self.driver.find_element(By.ID, "login-button").click()
+        time.sleep(5)
+        try:
+&gt;           self.status=self.driver.find_element(By.XPATH,"//a[@class='shopping_cart_link']").is_displayed()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_parameterization.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+..\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:926: in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:458: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0000019DB4838A50&gt;
+response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...ff603d64e1f\\n\\t0x7ff603d4b7c4\\n\\t0x7ff603d4b97f\\n\\t0x7ff603d318e8\\n\\t0x7ff95d0ae8d7\\n\\t0x7ff95e128d9c\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -&gt; None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message")
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "&lt;anonymous&gt;")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "&lt;anonymous&gt;")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='shopping_cart_link']"}
+E         (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+E       Stacktrace:
+E       Symbols not available. Dumping unresolved backtrace:
+E       	0x7ff603fea235
+E       	0x7ff603d42630
+E       	0x7ff603ad16dd
+E       	0x7ff603b2a27e
+E       	0x7ff603b2a58c
+E       	0x7ff603b7ed77
+E       	0x7ff603b7baba
+E       	0x7ff603b1b0ed
+E       	0x7ff603b1bf63
+E       	0x7ff604015d60
+E       	0x7ff60400fe8a
+E       	0x7ff604031005
+E       	0x7ff603d5d71e
+E       	0x7ff603d64e1f
+E       	0x7ff603d4b7c4
+E       	0x7ff603d4b97f
+E       	0x7ff603d318e8
+E       	0x7ff95d0ae8d7
+E       	0x7ff95e128d9c
+
+..\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: NoSuchElementException
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;PYTHON2.tests.test_parameterization.TestClass object at 0x0000019DB47565D0&gt;, username = 'locked_out_user', password = 'secret_sauce'
+
+    @pytest.mark.parametrize('username,password',[("standard_user","secret_sauce"),("locked_out_user","secret_sauce"),("problem_user","secret_sauce"),("error_user","secret_sauce")])
+    def test_swaglabs(self,username,password):
+        self.driver = webdriver.Chrome()
+        self.driver.get("https://www.saucedemo.com/")
+        self.driver.find_element(By.ID, "user-name").send_keys(username)
+        self.driver.find_element(By.ID, "password").send_keys(password)
+        time.sleep(5)
+        self.driver.find_element(By.ID, "login-button").click()
+        time.sleep(5)
+        try:
+            self.status=self.driver.find_element(By.XPATH,"//a[@class='shopping_cart_link']").is_displayed()
+            self.driver.close()
+            assert self.status==True
+    
+    
+        except:
+            self.driver.close()
+&gt;           assert self.status == False
+                   ^^^^^^^^^^^
+E           AttributeError: 'TestClass' object has no attribute 'status'
+
+tests\test_parameterization.py:44: AttributeError</failure></testcase><testcase classname="tests.test_parameterization.TestClass" name="test_swaglabs[problem_user-secret_sauce]" time="14.797" /><testcase classname="tests.test_parameterization.TestClass" name="test_swaglabs[error_user-secret_sauce]" time="16.293" /><testcase classname="tests.test_skipping.TestLogin" name="test_LoginByEmail" time="0.001" /><testcase classname="tests.test_skipping.TestLogin" name="test_LoginByFacebook" time="0.001" /><testcase classname="tests.test_skipping.TestLogin" name="test_LoginByTwitter" time="0.001" /><testcase classname="tests.test_skipping.TestLogin" name="test_SignupByEmail" time="0.000"><skipped type="pytest.skip" message="unconditional skip">C:\Users\Satish\pycharmprojects\python2025\PYTHON2\tests\test_skipping.py:18: unconditional skip</skipped></testcase><testcase classname="tests.test_skipping.TestLogin" name="test_SignupByFacebook" time="0.001"><skipped type="pytest.skip" message="unconditional skip">C:\Users\Satish\pycharmprojects\python2025\PYTHON2\tests\test_skipping.py:24: unconditional skip</skipped></testcase><testcase classname="tests.test_skipping.TestLogin" name="test_SignupByTwitter" time="0.000"><skipped type="pytest.skip" message="unconditional skip">C:\Users\Satish\pycharmprojects\python2025\PYTHON2\tests\test_skipping.py:30: unconditional skip</skipped></testcase></testsuite></testsuites>
